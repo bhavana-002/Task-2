@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧠 CEO Control Panel</title>
+  <link rel="stylesheet" href="cs.css" />
+</head>
+<body>
+
+  <div class="ceo-layout">
+
+ 
+    <nav class="ceo-nav">
+      <h1>👑 CEO Dashboard</h1>
+    </nav>
+
+    
+    <main class="ceo-main">
+      
+      
+      <section class="ceo-form-card">
+        <h2>📬 Get in Touch</h2>
+        <form id="userForm" class="user-form">
+          <input type="text" id="name" placeholder="🧑 Your Royal Name" required />
+          <input type="email" id="email" placeholder="📧 Your Email Empire" required />
+          <button type="submit">🚀 Submit to CEO</button>
+        </form>
+      </section>
+
+      
+      <section class="ceo-todo-card">
+        <h2>📝 CEO To-Do List</h2>
+        <div class="todo-input-area">
+          <input type="text" id="todoInput" placeholder="💡 Add your next million-dollar idea..." />
+          <button onclick="addTodo()">➕ Add Task</button>
+        </div>
+        <ul id="todoList"></ul>
+      </section>
+
+    </main>
+
+    
+    <footer class="ceo-footer">
+      <p>💼 Built with ambition. Fueled by caffeine ☕. Styled by the CEO. 🧠</p>
+    </footer>
+
+  </div>
+
+  <script src="sc.js"></script>
+</body>
+</html>

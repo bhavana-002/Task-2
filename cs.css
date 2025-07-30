@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #dfe9f3);
+}
+
+.ceo-layout {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* NAV */
+.ceo-nav {
+  grid-area: nav;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+.ceo-main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.ceo-form-card, .ceo-todo-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+
+.user-form input,
+.todo-input-area input,
+.user-form button,
+.todo-input-area button {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 2px solid #94a3b8;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#todoList li {
+  background: #e2e8f0;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todoList li span {
+  flex-grow: 1;
+}
+
+#todoList li button {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+.ceo-footer {
+  grid-area: footer;
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .ceo-main {
+    grid-template-columns: 1fr;
+  }
+}
